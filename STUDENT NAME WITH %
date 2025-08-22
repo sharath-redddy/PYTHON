@@ -1,8 +1,0 @@
-a=["sam","ram","ravi"]
-m=[[10,20,30],[40,50,60],[40,50,90]]
-p=[]
-for i in m:
-    d=sum(i)//4
-    p.append(d)
-for i in range (3):
-    print("{}.{}:{}%".format(i+1,a[i],p[i]))
