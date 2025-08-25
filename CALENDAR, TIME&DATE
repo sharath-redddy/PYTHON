@@ -1,0 +1,21 @@
+1.
+import calendar
+a=calendar.calendar(2025)
+print (a)
+
+2.
+from datetime import datetime
+import pytz
+a = pytz.timezone("Asia/Kolkata")
+b = datetime.now(a)
+print(b)
+
+3.
+from datetime import datetime
+a = input("Enter birthday date in(yyyy-mm-dd): ")
+b = input("Enter today's date in(yyyy-mm-dd): ")
+a1 = datetime.strptime(a, "%Y-%m-%d")
+b1 = datetime.strptime(b, "%Y-%m-%d")
+print("No of days lived:", (b1 - a1).days)
+
+
