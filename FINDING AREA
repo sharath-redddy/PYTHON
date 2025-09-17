@@ -1,0 +1,30 @@
+def sqaure():
+    a=int(input("enter side of sq:"))
+    print("Area of Sqaure : ",a**a)
+def rectangle(a,b):
+    print("Area of rectangle : ",a*b)
+def circle():
+    return 3.14*(5**4)
+def triangle(l,b):
+    return l*b*0.5
+while(True):
+    print("Menu : \n 1) Square \n 2) Rectangle \n 3) Cicle \n 4) triangle \n 5) Exit ")
+    m=int(input("Enter the choice :"))
+    if m==1:
+        sqaure()
+    elif m==2:
+        l=int(input("enter the length : "))
+        b=int(input("Enter the breadth : "))
+        rectangle(l,b)
+    elif m==3:
+        r=circle()
+        print("Area of circle : ",r)
+    elif m==4:
+        l=int(input("enter the length : "))
+        b=int(input("Enter the breadth : "))
+        r=triangle(l,b)
+        print("Area of tringle : ",r)
+    elif m==5:
+        break
+    else:
+        print("choice correct number")
