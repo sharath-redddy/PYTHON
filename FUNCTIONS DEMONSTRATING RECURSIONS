@@ -1,0 +1,41 @@
+def manju(a):
+    if(a==1):
+        return 1
+    b=manju(a-1)
+    print("manju")
+    return b+2
+x=manju(5)
+print(x)
+
+--------------------------------
+
+def raju(a):
+    if(a==4):
+        return
+    print(a+10,end=" ")
+    raju(a+1)
+    print(a,end=" ")
+raju(1)
+
+-----------------------------------
+
+def muki(a):
+    if a == 1:
+        print("Hai") 
+        return
+    muki(a - 1)
+    print("Hai")
+    muki(a - 1)
+
+muki(5)
+
+------------------------------------
+
+def ram(n):
+    for i in range(20):
+        if (i%n==3):
+            return
+        else:
+            print("Hai")
+        print("Are U Ok?")
+ram(4)
