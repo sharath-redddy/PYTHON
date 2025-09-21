@@ -1,0 +1,34 @@
+class rect:
+    color="RED"
+    def set_dim(self,l,b):
+        self.l=l
+        self.b=b
+    def area(self):
+        return self.l*self.b
+    def peri(self):
+        return (2*(self.l+self.b))
+    def category(self):
+        if(self.area()<500):
+            return "SMALL"
+        elif(self.area()>500 and self.area()<1000):
+            return "MEDIUM"
+        else:
+            return "BIG"
+    def display(self):
+        print("the color",self.color)
+        print("the area",self.area())
+        print("the peri",self.peri())
+        print("the category",self.category())
+r1=rect()
+r2=rect()
+r3=rect()
+l=10
+b=20
+r1.set_dim(l,b)
+r2.set_dim(l+1,b+1)
+r3.set_dim(l+20,b+20)
+r1.display()
+print("--------------")
+r2.display()
+print("--------------")
+r3.display()
