@@ -1,0 +1,32 @@
+class student:
+    dept = "CSE"
+    def set_dim(self, name, m1, m2, m3):
+        self.name = name
+        self.m1 = m1
+        self.m2 = m2
+        self.m3 = m3
+    def cal_per(self):
+        return (self.m1 + self.m2 + self.m3) // 3
+    def display(self):
+        print("dept:", self.dept)
+        print("name:", self.name)
+        print("percentage:", self.cal_per())
+
+students = []
+n = int(input("enter the number of students: "))
+
+for i in range(n):
+    s = student()
+    name = input("name: ")
+    m1 = int(input("m1: "))
+    m2 = int(input("m2: "))
+    m3 = int(input("m3: "))
+    s.set_dim(name, m1, m2, m3)      
+    students.append(s)
+
+index = 1
+for stu in students:
+    print("_")
+    print("student no{} info".format(index))
+    stu.display()
+    index += 1
