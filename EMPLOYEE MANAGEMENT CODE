@@ -1,0 +1,32 @@
+class cog:
+    comp = "COGNIZANT"
+    comp_profit = 5000000
+    tax_profit = 10
+    def __init__(self, a, b, c):
+        self.name = a
+        self.sal = b
+        self.share = c
+        self.tax = 0
+        self.profit_share = 0
+    def cal_tax(self):
+        self.tax = (self.tax_profit * self.sal) / 100
+    def cal_share(self):
+        self.profit_share = (self.share * self.sal) / 100
+    def dis(self):
+        print("Name:", self.name)
+        print("Salary:", self.sal)
+        self.cal_tax()
+        self.cal_share()
+        print("Tax to pay", self.tax)
+        print("Share", self.profit_share)
+s = int(input("Enter no of emp:"))
+emp = []
+for i in range(s):
+    a = input("Enter name of emp:")
+    b = int(input("enter salary:"))
+    c = int(input("Enter share percentage:"))
+    s1 = cog(a, b, c)
+    emp.append(s1)
+for i in emp:
+    i.dis()
+    print("...")
